@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0;}
 
-a {
+#darkside, #lightside {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,14 +9,34 @@ a {
   display: block;
 }
 
-a:first-child {
+#darkside {
   -webkit-clip-path: polygon(0 0, 0 100vh, 100% 100vh);
   clip-path: polygon(0 0, 0 100vh, 100% 100vh);
   background: #d6d6d6;
 }
 
-a:last-child {
+#lightside {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh);
   clip-path: polygon(0 0, 0 100vh, 100% 100vh);
   background: #212121;
+}
+
+h1{
+  text-transform: uppercase;
+  font-size:72px;
+  font-style:Century Gothic;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+  margin-top: 80vh;
+  margin-right: 50vw;
+}
+
+h2{
+  text-transform: uppercase;
+  font-size:72px;
+  font-style:Century Gothic;
+  font-weight: 700;
+  text-align: center;
+  color: white;
 }
