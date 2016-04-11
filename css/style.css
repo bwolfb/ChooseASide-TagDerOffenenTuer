@@ -12,13 +12,13 @@
 #darkside {
   -webkit-clip-path: polygon(0 0, 0 100vh, 100% 100vh);
   clip-path: polygon(0 0, 0 100vh, 100% 100vh);
-  background: #d6d6d6;
+  background: #212121;
 }
 
 #lightside {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh);
   clip-path: polygon(0 0, 0 100vh, 100% 100vh);
-  background: #212121;
+  background: #d6d6d6;
 }
 
 h1{
@@ -28,8 +28,6 @@ h1{
   font-weight: 700;
   text-align: center;
   color: black;
-  margin-top: 80vh;
-  margin-right: 50vw;
 }
 
 h2{
@@ -39,4 +37,7 @@ h2{
   font-weight: 700;
   text-align: center;
   color: white;
+  margin-top: 80vh;
+  margin-right: 50vw;
+
 }
