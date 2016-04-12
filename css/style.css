@@ -13,14 +13,16 @@
   -webkit-clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
   clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
   background: #212121;
-  -webkit-transition: 1s all; /* Safari */
-    transition: 1s all;
+  -webkit-transition: -webkit-clip-path 0.5s; /* Safari */
+    transition: -webkit-clip-path 0.5s;
 }
 
 #lightside {
   -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
   clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
   background: #d6d6d6;
+  -webkit-transition: -webkit-clip-path 0.5s; /* Safari */
+    transition: -webkit-clip-path 0.5s;
 }
 
 #lightside_title{
@@ -31,7 +33,8 @@
   text-align: center;
   color: black;
   margin-top: 65vh;
-  margin-left: 50vw;
+  margin-left: 71vw;
+  width:22%;
 }
 
 #darkside_title{
@@ -42,5 +45,6 @@
   text-align: center;
   color: white;
   margin-top: 20vh;
-  margin-right: 50vw;
+  margin-left: 5vw;
+  width: 21%;
 }
