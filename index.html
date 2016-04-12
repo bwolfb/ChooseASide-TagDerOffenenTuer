@@ -8,48 +8,49 @@
   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
-  <div>
-    <div id="lightside">
-      <h1 id="lightside_title">LIGHT SIDE</h1>
-      <script>
-      $('#lightside_title').on({
-        mouseover: function(){
-          $("#darkside").insertBefore("#lightside");
-          $("#lightside").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100vh)");
-        },
-        mouseleave: function(){
-          $("#lightside").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100vh)")
-        },
-        click: function(){
-          $("#lightside_title").css("margin-top","30vh");
-          $("#lightside_title").css("margin-left","40vw");
-          $("#lightside").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100vh)");
-          $("#lightside_title").off('mouseleave');
-        }
-      });
-      </script>
+  <div id="lightside">
+    <h1 id="lightside_title">LIGHT SIDE</h1>
+    <script>
+    $('#lightside_title').on({
+      mouseover: function(){
+        $("#darkside").insertBefore("#lightside");
+        $("#lightside").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100vh)");
+      },
+      mouseleave: function(){
+        $("#lightside").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100vh)")
+      },
+      click: function(){
+        $("#lightside_title").css("margin-top","30vh");
+        $("#lightside_title").css("margin-left","40vw");
+        $("#lightside").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100vh)");
+        $("#lightside_title").off('mouseleave');
+      }
+    });
+    </script>
+  </div>
+  <div id="darkside">
+    <div>
+      <a id="back" type="button">back</a>
     </div>
-    <div id="darkside">
-      <h1 id="darkside_title">DARK SIDE</h1>
-      <script>
-      $('#darkside_title').on({
-        mouseover: function(){
-          $("#lightside").insertBefore("#darkside");
-          $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100vh)")
-        },
-        mouseleave: function(){
-          $("#darkside").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100vh)")
-        },
-        click: function(){
-          $("#lightside").insertBefore("#darkside");
-          $("#darkside_title").css("margin-top","30vh");
-          $("#darkside_title").css("margin-left","40vw");
-          $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100vh)");
-          $("#darkside_title").off('mouseleave');
-        }
-      });
-      </script>
-    </div>
+    <h1 id="darkside_title">DARK SIDE</h1>
+    <script>
+    $('#darkside_title').on({
+      mouseover: function(){
+        $("#lightside").insertBefore("#darkside");
+        $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100vh)")
+      },
+      mouseleave: function(){
+        $("#darkside").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100vh)")
+      },
+      click: function(){
+        $("#lightside").insertBefore("#darkside");
+        $("#darkside_title").css("margin-top","30vh");
+        $("#darkside_title").css("margin-left","40vw");
+        $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100vh)");
+        $("#darkside_title").off('mouseleave');
+      }
+    });
+    </script>
   </div>
 </body>
 </html>

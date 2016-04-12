@@ -52,3 +52,14 @@
   -webkit-transition: margin-top 0.5s, margin-left 0.5s; /* Safari */
     transition: margin-top 0.5s, margin-left 0.5s;
 }
+
+#back {
+  margin-top: 10px;
+  margin-left: 10px;
+  background: red;
+  width: 10%;
+  height: 5%;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+}
