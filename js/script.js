@@ -1,4 +1,13 @@
 $(document).ready(function () {
+  var resizeTimer;
+  $(window).on('resize', function(e) {
+    $("#darkside,#lightside,#darkside_title,#lightside_title").css("transition-duration","0s");
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      $("#darkside,#lightside,#darkside_title,#lightside_title").css("transition-duration","0.5s");
+    }, 250);
+  });
+
   $('#lightside_title').on({
     mouseover: function(){
       $("#darkside").insertBefore("#lightside");
