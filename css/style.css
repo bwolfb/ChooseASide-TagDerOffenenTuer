@@ -35,6 +35,8 @@
   margin-top: 65vh;
   margin-left: 71vw;
   width:22%;
+  -webkit-transition: margin-top 0.5s, margin-left 0.5s; /* Safari */
+    transition: margin-top 0.5s, margin-left 0.5s;
 }
 
 #darkside_title{
@@ -47,4 +49,6 @@
   margin-top: 20vh;
   margin-left: 5vw;
   width: 21%;
+  -webkit-transition: margin-top 0.5s, margin-left 0.5s; /* Safari */
+    transition: margin-top 0.5s, margin-left 0.5s;
 }
