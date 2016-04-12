@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0;}
 
-#darkside, #lightside {
+#darkside, #lightside, #darksidebackground, #lightsidebackground {
   position: absolute;
   top: 0;
   left: 0;
@@ -8,14 +8,32 @@
   width: 100%;
   display: block;
 }
-
+#lightsidebackground{
+  -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
+  clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
+  background-image: url("../img/good.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: -webkit-clip-path 0.5s; /* Safari */
+  transition: -webkit-clip-path 0.5s;
+  }
+#darksidebackground{
+  -webkit-clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
+  clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
+    background-image: url("../img/bad.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: -webkit-clip-path 0.5s; /* Safari */
+    transition: -webkit-clip-path 0.5s;
+}
 #darkside {
   -webkit-clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
   clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
   background-image: url("../img/imperator.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #212121;
   -webkit-transition: -webkit-clip-path 0.5s; /* Safari */
   transition: -webkit-clip-path 0.5s;
 }
@@ -26,7 +44,6 @@
   background-image: url("../img/FighterObiHead.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #d6d6d6;
   -webkit-transition: -webkit-clip-path 0.5s; /* Safari */
   transition: -webkit-clip-path 0.5s;
 }
