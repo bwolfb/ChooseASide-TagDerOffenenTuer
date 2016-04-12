@@ -4,14 +4,27 @@
     <meta charset="utf-8">
     <title>Choose your Side</title>
     <link href="css/style.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   </head>
   <body>
     <div>
       <div id="lightside">
-        <h1>BRIGHT SIDE<h1>
+        <h1 id="lightside_title">LIGHT SIDE</h1>
         </div>
       <div id="darkside">
-        <h2>DARK SIDE</h2>
+        <h1 id="darkside_title">DARK SIDE</h1>
+        <script>
+        $("#darkside_title").click(function() {
+          $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)")
+        });
+          $("#darkside_title").hover(function() {
+            $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)")
+          },
+        function() {
+          $("#darkside").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100vh)")
+        });
+        </script>
       </div>
     </div>
   </body>

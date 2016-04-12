@@ -10,34 +10,37 @@
 }
 
 #darkside {
-  -webkit-clip-path: polygon(0 0, 0 100vh, 100% 100vh);
-  clip-path: polygon(0 0, 0 100vh, 100% 100vh);
+  -webkit-clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
+  clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
   background: #212121;
+  -webkit-transition: 1s all; /* Safari */
+    transition: 1s all;
 }
 
 #lightside {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh);
-  clip-path: polygon(0 0, 0 100vh, 100% 100vh);
+  -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
+  clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
   background: #d6d6d6;
 }
 
-h1{
+#lightside_title{
   text-transform: uppercase;
   font-size:72px;
   font-style:Century Gothic;
   font-weight: 700;
   text-align: center;
   color: black;
+  margin-top: 65vh;
+  margin-left: 50vw;
 }
 
-h2{
+#darkside_title{
   text-transform: uppercase;
   font-size:72px;
   font-style:Century Gothic;
   font-weight: 700;
   text-align: center;
   color: white;
-  margin-top: 80vh;
+  margin-top: 20vh;
   margin-right: 50vw;
-
 }
