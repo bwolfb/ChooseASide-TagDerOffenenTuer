@@ -12,17 +12,23 @@
 #darkside {
   -webkit-clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
   clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
-  background: #212121;
+  background-image: url("../img/imperator.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #212121;
   -webkit-transition: -webkit-clip-path 0.5s; /* Safari */
-    transition: -webkit-clip-path 0.5s;
+  transition: -webkit-clip-path 0.5s;
 }
 
 #lightside {
   -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
   clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
-  background: #d6d6d6;
+  background-image: url("../img/FighterObiHead.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d6d6d6;
   -webkit-transition: -webkit-clip-path 0.5s; /* Safari */
-    transition: -webkit-clip-path 0.5s;
+  transition: -webkit-clip-path 0.5s;
 }
 
 #lightside_title{
@@ -36,7 +42,7 @@
   margin-left: 71vw;
   width:22%;
   -webkit-transition: margin-top 0.5s, margin-left 0.5s; /* Safari */
-    transition: margin-top 0.5s, margin-left 0.5s;
+  transition: margin-top 0.5s, margin-left 0.5s;
 }
 
 #darkside_title{
@@ -50,7 +56,7 @@
   margin-left: 5vw;
   width: 21%;
   -webkit-transition: margin-top 0.5s, margin-left 0.5s; /* Safari */
-    transition: margin-top 0.5s, margin-left 0.5s;
+  transition: margin-top 0.5s, margin-left 0.5s;
 }
 
 button {
