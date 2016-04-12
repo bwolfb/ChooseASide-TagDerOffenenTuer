@@ -24,6 +24,7 @@ $(document).ready(function () {
       $("#lightside").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100vh)");
       $("#lightsidebackground").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100vh)");
       $("#lightside_title").off('mouseleave');
+      $("buttonwrapper").append("<button class=\"lightside_button\"><span>Back To Home</span></button>");
     }
   });
 
@@ -44,6 +45,7 @@ $(document).ready(function () {
       $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100vh)");
       $("#darksidebackground").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100vh)");
       $("#darkside_title").off('mouseleave');
+      $("buttonwrapper").add($.parseHTML("<button class=\"darkside_button\"><span>Back To Home</span></button>"));
     }
   });
 });
