@@ -77,35 +77,37 @@
 }
 
 button {
+  top:0;
+  left:0;
   display: inline-block;
   border-radius: 5px;
   border: none;
   text-align: center;
   font-size: 20px;
-  padding: 20px;
-  width: 300px;
-  transition: all 0.5s;
+  padding: 10px;
   cursor: pointer;
-  margin: 5px;
   position: absolute;
-  z-index: 1;
+  transition: box-shadow 0.3s;
+  width: 100px;
 }
 
-.lightside_button {
+#lightside_button {
   background-color: #555555;
   color: #FFFFFF;
+  display: none;
 }
 
-.darkside_button {
+#darkside_button {
   background-color: #FFFFFF;
   color: black;
+  display: none;
 }
 
-.lightside_button:hover {
+#lightside_button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.darkside_button:hover {
+#darkside_button:hover {
   box-shadow: 0 12px 16px 0 rgba(214,214,214,0.24),0 17px 50px 0 rgba(214,214,214,0.19);
 }
 
@@ -120,7 +122,7 @@ button span {
   transition: 0.5s;
 }
 
-button span:before {
+button span:after {
   content: '»';
   position: absolute;
   opacity: 0;
@@ -133,7 +135,7 @@ button:hover span {
   padding-right: 25px;
 }
 
-button:hover span:before {
+button:hover span:after {
   opacity: 1;
   right: 0;
 }
