@@ -42,6 +42,9 @@ $(document).ready(function () {
         $("#lightside_button").remove();
         onLightside = false;
       });
+
+      $("#lightside").css("background-image","none");
+      // $( ".container" ).append( $( "bild1" ) );
     }
   });
 
@@ -78,6 +81,7 @@ $(document).ready(function () {
         onDarkside = false;
       });
 
+      $("#darkside").css("background-image","none");
     }
   });
 });
