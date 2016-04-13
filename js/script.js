@@ -23,7 +23,9 @@ $(document).ready(function () {
       $("#lightside_title").css("margin-left","40vw");
       $("#lightside").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100vh)");
       $("#lightsidebackground").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100vh)");
+      $("#lightside").css("background-image","none");
       $("#lightside_title").off('mouseleave');
+      // $( ".container" ).append( $( "bild1" ) );
       $("buttonwrapper").append("<button class=\"lightside_button\"><span>Back To Home</span></button>");
     }
   });
@@ -39,11 +41,11 @@ $(document).ready(function () {
       $("#darksidebackground").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100vh)");
     },
     click: function(){
-      $("#lightside").insertBefore("#darkside");
       $("#darkside_title").css("margin-top","30vh");
       $("#darkside_title").css("margin-left","40vw");
       $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100vh)");
       $("#darksidebackground").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100vh)");
+      $("#darkside").css("background-image","none");
       $("#darkside_title").off('mouseleave');
       $("buttonwrapper").add($.parseHTML("<button class=\"darkside_button\"><span>Back To Home</span></button>"));
     }
