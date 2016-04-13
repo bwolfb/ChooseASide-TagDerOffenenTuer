@@ -63,7 +63,7 @@
 }
 
 #lightside_title{
-  color: black;
+  color: white;
   text-shadow: 1px  1px 70px blue;
   margin-top: 65vh;
   margin-left: 71vw;
@@ -153,6 +153,8 @@ button:focus {
 /*-------------------LASER-------------------*/
 .lightsaber {
   position: relative;
+  transform: rotate(90deg);
+   -webkit-transform: rotate(90deg);
 }
 
 .lightsaber label {
@@ -358,4 +360,11 @@ div {
   from { box-shadow: 0 0 10px #3784d6; }
   50% { box-shadow: 0 0 16px #3784d6; }
   to { box-shadow: 0 0 10px #3784d6; }
+}
+
+#lichtschwertRot{
+
+}
+#lichtschwertBlau{
+
 }
