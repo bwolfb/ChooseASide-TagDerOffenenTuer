@@ -362,9 +362,10 @@ div {
   to { box-shadow: 0 0 10px #3784d6; }
 }
 
-#lichtschwertRot{
-
+#footerlichtschwert .lightsaber input[type=checkbox]:checked ~ div.plasma {
+  height: 100vh;
 }
-#lichtschwertBlau{
 
+#footerlichtschwert .lightsaber .plasma {
+  width: 150px;
 }
