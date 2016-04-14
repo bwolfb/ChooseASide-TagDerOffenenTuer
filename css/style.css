@@ -365,3 +365,11 @@ div {
   50% { box-shadow: 0 0 16px #3784d6; }
   to { box-shadow: 0 0 10px #3784d6; }
 }
+
+/*#footerlichtschwert .lightsaber input[type=checkbox]:checked ~ div.plasma {
+  height: 100vh;
+}
+
+#footerlichtschwert .lightsaber .plasma {
+  width: 150px;
+}*/
