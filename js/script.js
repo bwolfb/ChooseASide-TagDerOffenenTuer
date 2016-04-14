@@ -34,7 +34,7 @@ $(document).ready(function () {
       $("#lightside_button").slideDown(400);
 
       $("#lightside_button").click(function() {
-        $("#lightside").delay(400).css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100%)");
+        $("#lightside").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100%)");
         $("#lightsidebackground").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100%)");
         $("#lightside_title").css("margin-top","65vh");
         $("#lightside_title").css("margin-left","71vw");
@@ -43,6 +43,9 @@ $(document).ready(function () {
           $("#lightside_button").remove();
         }, 400);
         onLightside = false;
+        setTimeout(function() {
+          $("#lightside").css("background-image","url(\"img/FighterObiHead.png\")");
+        }, 700);
       });
 
       $("#lightside").css("background-image","none");
@@ -83,6 +86,9 @@ $(document).ready(function () {
         $("#darkside").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100%)");
         $("#darksidebackground").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100%)");
         onDarkside = false;
+        setTimeout(function() {
+          $("#darkside").css("background-image","url(\"img/imperator.png\")");
+        }, 700);
       });
 
       $("#darkside").css("background-image","none");

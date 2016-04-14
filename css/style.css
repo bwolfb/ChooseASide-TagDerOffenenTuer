@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 #darkside, #lightside, #darksidebackground, #lightsidebackground {
   position: absolute;
@@ -51,6 +50,7 @@
 
 /*-------------------Titel-------------------*/
 #lightside_title, #darkside_title{
+  text-transform: uppercase;
   font-size:72px;
   font-family: Star Jedi, Impact,serif;
   -src: url(../fonts/starjedi/Starjedi.ttf);
@@ -60,23 +60,24 @@
   -webkit-transition: margin-top 0.5s, margin-left 0.5s; /* Safari */
   transition: margin-top 0.5s, margin-left 0.5s;
   padding: 0, 0, 2px, 0;
+  color: white;
 }
 
 #lightside_title{
-  color: white;
   text-shadow: 1px  1px 70px blue;
   margin-top: 65vh;
   margin-left: 71vw;
 }
 
 #darkside_title{
-  color: white;
   text-shadow: 1px  1px 70px red;
   margin-top: 20vh;
   margin-left: 5vw;
 }
 /*-------------------Button Allgemein-------------------*/
 button {
+  top:0;
+  left:0;
   display: inline-block;
   border-radius: 5px;
   border: none;
@@ -119,8 +120,6 @@ button:focus {
 }
 /*-------------------Lightside Button-------------------*/
 #lightside_button {
-  top:0;
-  right:0;
   background-color: #555555;
   color: #FFFFFF;
   display: none;
@@ -132,8 +131,6 @@ button:focus {
 
 /*-------------------Darkside Button-------------------*/
 #darkside_button {
-  top:0;
-  left:0;
   background-color: #FFFFFF;
   color: black;
   display: none;
@@ -158,8 +155,6 @@ button:focus {
 /*-------------------LASER-------------------*/
 .lightsaber {
   position: relative;
-  transform: rotate(90deg);
-   -webkit-transform: rotate(90deg);
 }
 
 .lightsaber label {
@@ -243,6 +238,7 @@ button:focus {
 button:hover span:after {
   opacity: 1;
   right: 0;
+}
 
 .lightsaber input[type=checkbox]:checked ~ div.plasma {
   height: 250px;
@@ -368,12 +364,4 @@ div {
   from { box-shadow: 0 0 10px #3784d6; }
   50% { box-shadow: 0 0 16px #3784d6; }
   to { box-shadow: 0 0 10px #3784d6; }
-}
-
-#footerlichtschwert .lightsaber input[type=checkbox]:checked ~ div.plasma {
-  height: 100vh;
-}
-
-#footerlichtschwert .lightsaber .plasma {
-  width: 150px;
 }
