@@ -58,8 +58,16 @@ $(document).ready(function () {
   });
 
   $("#darkside").mouseleave(function() {
-    $("#saberfire").css({bottom:-1200})
-    $("#redlightsaber").css({bottom:-1200});
+    $("#saberfire").css({bottom:-1000})
+    $("#redlightsaber").css({bottom:-1000});
+  });
+
+  $("#lightside").mouseover(function() {
+    $("#bluelightsaber").css({bottom:0});
+  });
+
+  $("#lightside").mouseleave(function() {
+    $("#bluelightsaber").css({bottom:-1000})
   });
 
   $('#darkside_title').on({

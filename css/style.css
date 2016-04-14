@@ -60,14 +60,15 @@ body {
 header{
 background-image: url("../img/titel-balken-background.jpg");
 background-repeat: repeat;
-height: 120px;
+height: 15vh;
 }
 #Titel {
-  font-size:72px;
+  font-size:4vw;
   font-family: StarJedi, Impact,serif;
   text-shadow: 1px  1px 30px white;
   text-align: center;
   color: white;
+  line-height: 15vh;
 }
 
 /*-------------------Beschriftungen-------------------*/
@@ -78,7 +79,7 @@ height: 120px;
 
 #lightside_title, #darkside_title{
   cursor: pointer;
-  font-size:72px;
+  font-size:4.75vw;
   font-family: StarJedi, Impact;
   text-align: center;
   width:22%;
@@ -93,13 +94,13 @@ height: 120px;
 #lightside_title{
   text-shadow: 1px  1px 70px blue;
   margin-top: 20vh;
-  margin-left: 5vw;
+  margin-left: 68vw;
 }
 
 #darkside_title{
   text-shadow: 1px  1px 70px red;
   margin-top: 20vh;
-  margin-left: 5vw;
+  margin-left: 7vw;
 }
 /*-------------------Button Allgemein-------------------*/
 button {
@@ -406,7 +407,7 @@ div {
   bottom:0;
 }
 
-#lightsabercontainer {
+#redlightsabercontainer {
   overflow: hidden;
   margin-bottom: 425px;
   height: 1000px;
@@ -418,4 +419,31 @@ div {
   left:-52px;
   bottom: -1000px;
   transition: bottom 0.7s;
+}
+
+#goodboyhandle {
+  bottom:-240px;
+  right: -27px;
+  position: absolute;
+  z-index: 1
+}
+
+#goodboylightsaber {
+  position: absolute;
+  bottom:0;
+  right: 0;
+}
+
+#bluelightsaber {
+  position: absolute;
+  right:-45px;
+  bottom: -1000px;
+  transition: bottom 0.7s;
+}
+
+#bluelightsabercontainer {
+  overflow: hidden;
+  margin-bottom: 425px;
+  height: 1000px;
+  width: 600px;
 }
