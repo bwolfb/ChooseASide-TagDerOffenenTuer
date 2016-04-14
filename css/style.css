@@ -14,6 +14,10 @@ body {
   width: 100%;
   display: block;
 }
+
+body {
+  overflow: hidden;
+}
 /*-------------------Background-------------------*/
 #lightsidebackground, #darksidebackground{
   background-position: center;
@@ -41,49 +45,55 @@ body {
 }
 
 #darkside {
-  -webkit-clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100%);
-  clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100%);
+  -webkit-clip-path: polygon(65vw 0, 0 0, 0 100%, 35% 100vh);
+  clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
   background-image: url("../img/imperator.png");
 }
 
 #lightside {
-  -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100%);
-  clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100%);
+  -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
+  clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
   background-image: url("../img/FighterObiHead.png");
 }
 
 /*-------------------Titel-------------------*/
-#header{
+header{
 background-image: url("../img/titel-balken-background.jpg");
 background-repeat: repeat;
-height: 10vh;
+height: 120px;
 }
 #Titel {
   font-size:72px;
-  font-family: Star Jedi, Impact,serif;
-  -src: url(../fonts/starjedi/Starjedi.ttf);
+  font-family: StarJedi, Impact,serif;
   text-shadow: 1px  1px 30px white;
   text-align: center;
   color: white;
 }
 
 /*-------------------Beschriftungen-------------------*/
+@font-face {
+  font-family: StarJedi;
+  src: url(../fonts/starjedi/Starjedi.ttf);
+}
+
 #lightside_title, #darkside_title{
+  cursor: pointer;
   font-size:72px;
-  font-family: Star Jedi, Impact,serif;
-  -src: url(../fonts/starjedi/Starjedi.ttf);
+  font-family: StarJedi, Impact;
   text-align: center;
   width:22%;
   -webkit-transition: margin-top 0.5s, margin-left 0.5s; /* Safari */
   transition: margin-top 0.5s, margin-left 0.5s;
   padding: 0, 0, 2px, 0;
   color: white;
+  position: absolute;
+  z-index: 5;
 }
 
 #lightside_title{
   text-shadow: 1px  1px 70px blue;
-  margin-top: 65vh;
-  margin-left: 71vw;
+  margin-top: 20vh;
+  margin-left: 5vw;
 }
 
 #darkside_title{
@@ -175,29 +185,15 @@ button:focus {
 }
 
 .lightsaber label {
+  background-image: url("../img/badboywaffe.png");
   cursor: pointer;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 88;
   text-indent: -9999px;
-  width: 15px;
+  width: 14px;
   height: 50px;
-  border-bottom: solid 4px grey;
-  border-top: solid 5px grey;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  background: rgb(226,226,226); /* Old browsers */
-  background: linear-gradient(to right, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C */
-  background: -moz-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 */
 }
 
 .lightsaber .switch {
@@ -207,7 +203,7 @@ button:focus {
   display: block;
   position: absolute;
   bottom: 25px;
-  left: 13px;
+  left: 9px;
   transition: left 200ms;
   -moz-transition: left 200ms;
   -webkit-transition: left 200ms;
@@ -240,7 +236,7 @@ button:focus {
   -ms-transition: height 300ms;
   border-radius: 12px 12px 0 0;
   position: absolute;
-  bottom: 55px;
+  bottom: 45px;
   left: 2px;
   width: 10px;
   display: block;
@@ -263,7 +259,7 @@ button:hover span:after {
 
 .lightsaber input[type=checkbox]:hover ~ div.switch {
   background: #c09853;
-  left: 12px;
+  left: 10.5px;
 }
 
 .lightsaber input[type=checkbox]:checked ~ div.switch {
@@ -390,3 +386,36 @@ div {
 #footerlichtschwert .lightsaber .plasma {
   width: 150px;
 }*/
+
+#badboyhandle {
+  bottom:-50px;
+  left: -31px;
+  position: absolute;
+  z-index: 1
+}
+
+#redlightsaber {
+  position: absolute;
+  left:-50px;
+  bottom: -1000px;
+  transition: bottom 0.7s;
+}
+
+#badboylightsaber {
+  position: absolute;
+  bottom:0;
+}
+
+#lightsabercontainer {
+  overflow: hidden;
+  margin-bottom: 425px;
+  height: 1000px;
+  width: 600px;
+}
+
+#saberfire {
+  position: absolute;
+  left:-52px;
+  bottom: -1000px;
+  transition: bottom 0.7s;
+}

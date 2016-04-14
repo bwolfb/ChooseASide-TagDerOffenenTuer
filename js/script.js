@@ -49,8 +49,17 @@ $(document).ready(function () {
       });
 
       $("#lightside").css("background-image","none");
-      // $( ".container" ).append( $( "bild1" ) );
     }
+  });
+
+  $("#darkside").mouseover(function() {
+    $("#redlightsaber").css({bottom:0});
+    $("#saberfire").css({bottom:0})
+  });
+
+  $("#darkside").mouseleave(function() {
+    $("#saberfire").css({bottom:-1200})
+    $("#redlightsaber").css({bottom:-1200});
   });
 
   $('#darkside_title').on({
