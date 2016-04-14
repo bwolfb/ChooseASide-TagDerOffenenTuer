@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  overflow: hidden;
+}
 #darkside, #lightside, #darksidebackground, #lightsidebackground {
   position: absolute;
   top: 0;
@@ -37,23 +41,37 @@
 }
 
 #darkside {
-  -webkit-clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
-  clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100vh);
+  -webkit-clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100%);
+  clip-path: polygon(65% 0, 0 0, 0 100%, 35% 100%);
   background-image: url("../img/imperator.png");
 }
 
 #lightside {
-  -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
-  clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
+  -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100%);
+  clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100%);
   background-image: url("../img/FighterObiHead.png");
 }
 
 /*-------------------Titel-------------------*/
+#header{
+background-image: url("../img/titel-balken-background.jpg");
+background-repeat: repeat;
+height: 10vh;
+}
+#Titel {
+  font-size:72px;
+  font-family: Star Jedi, Impact,serif;
+  -src: url(../fonts/starjedi/Starjedi.ttf);
+  text-shadow: 1px  1px 30px white;
+  text-align: center;
+  color: white;
+}
+
+/*-------------------Beschriftungen-------------------*/
 #lightside_title, #darkside_title{
   font-size:72px;
   font-family: Star Jedi, Impact,serif;
   -src: url(../fonts/starjedi/Starjedi.ttf);
-  font-weight: 700;
   text-align: center;
   width:22%;
   -webkit-transition: margin-top 0.5s, margin-left 0.5s; /* Safari */
