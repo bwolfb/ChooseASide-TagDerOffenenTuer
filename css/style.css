@@ -243,6 +243,7 @@ button:focus {
 button:hover span:after {
   opacity: 1;
   right: 0;
+}
 
 .lightsaber input[type=checkbox]:checked ~ div.plasma {
   height: 250px;
@@ -370,10 +371,10 @@ div {
   to { box-shadow: 0 0 10px #3784d6; }
 }
 
-#footerlichtschwert .lightsaber input[type=checkbox]:checked ~ div.plasma {
+/*#footerlichtschwert .lightsaber input[type=checkbox]:checked ~ div.plasma {
   height: 100vh;
 }
 
 #footerlichtschwert .lightsaber .plasma {
   width: 150px;
-}
+}*/
