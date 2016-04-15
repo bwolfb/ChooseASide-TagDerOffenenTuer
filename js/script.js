@@ -42,21 +42,23 @@ $(document).ready(function () {
         setTimeout(function() {
           $("#goodboylightsaber").appendTo("footer");
           $("#goodboylightsaber").css("bottom","89%");
+          $("#lightside_button").slideDown(400);
         },1000);
         $("#lightside_title").css("margin-top","-1vh");
         $("#lightside_title").css("margin-left","40vw");
         $("#lightsideperson").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100%)");
         $("#lightsidebackground").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100%)");
         $("#lightside").prepend($("<button id=\"lightside_button\"><span>Back </span></button>"));
-        $("#lightside_button").slideDown(400);
         $("#lightsidepic").slideDown(800);
 
         $("#lightside_button").click(function() {
           $("#lightsidepic").slideUp(800);
+          setTimeout(function() {
           $("#lightside_title").css("margin-top","20vh");
           $("#lightside_title").css("margin-left","68vw");
           $("#lightsidebackground").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100%)");
           $("#lightsideperson").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100%)");
+        },800);
           $("#lightside_button").slideUp(400);
           setTimeout(function() {
             $("#lightside_button").remove();
@@ -154,13 +156,13 @@ $(document).ready(function () {
         setTimeout(function() {
           $("#badboylightsaber").appendTo("footer");
           $("#badboylightsaber").css("bottom","76%");
+          $("#darkside_button").slideDown(400);
         },1000);
         $("#darkside_title").css("margin-top","-1vh");
         $("#darkside_title").css("margin-left","40vw");
         $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)");
         $("#darksidebackground").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)");
         $("#darkside").prepend($("<button id=\"darkside_button\"><span>Back </span></button>"));
-        $("#darkside_button").slideDown(400);
         $("#darksidepic").css("diplay","block")
         $("#darksidepic").slideDown(800);
 
