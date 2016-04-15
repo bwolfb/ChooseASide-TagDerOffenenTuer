@@ -30,22 +30,23 @@ $(document).ready(function () {
     },
     click: function(){
       if (!onLightside) {
+        $("#lightside_title").css("margin-top","-1vh");
+        $("#lightside_title").css("margin-left","40vw");
+        setTimeout(function() {
         $("#lightsideperson").css("background-image","none");
         $("#goodboylightsaber").css("transform-origin","bottom right");
         $("#goodboylightsaber").css("transform","rotate(-90deg)");
         $("#goodboylightsaber").css("bottom","26%");
-        $("#goodboylightsaber").css("right","6%");
+        $("#goodboylightsaber").css("right","5.75%");
         $("#bluelightsaber").css("width","186px");
-        $("#bluelightsaber").css("height","70vw");
-        $("#bluelightsaber").css("bottom","-1350px");
-        $("#bluelightsabercontainer").css("height","70vw");
+        $("#bluelightsaber").css("height","1500px");
+        $("#bluelightsaber").css("bottom","-1500px");
+        $("#bluelightsabercontainer").css("height","1500px");
         setTimeout(function() {
           $("#goodboylightsaber").appendTo("footer");
           $("#goodboylightsaber").css("bottom","89%");
           $("#lightside_button").slideDown(400);
         },1000);
-        $("#lightside_title").css("margin-top","-1vh");
-        $("#lightside_title").css("margin-left","40vw");
         $("#lightsideperson").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100%)");
         $("#lightsidebackground").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100%)");
         $("#lightside").prepend($("<button id=\"lightside_button\"><span>Back </span></button>"));
@@ -54,11 +55,11 @@ $(document).ready(function () {
         $("#lightside_button").click(function() {
           $("#lightsidepic").slideUp(800);
           setTimeout(function() {
-          $("#lightside_title").css("margin-top","20vh");
-          $("#lightside_title").css("margin-left","68vw");
-          $("#lightsidebackground").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100%)");
-          $("#lightsideperson").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100%)");
-        },800);
+            $("#lightside_title").css("margin-top","20vh");
+            $("#lightside_title").css("margin-left","68vw");
+            $("#lightsidebackground").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100%)");
+            $("#lightsideperson").css("-webkit-clip-path","polygon(65% 0, 100% 0, 100% 100%, 35% 100%)");
+          },800);
           $("#lightside_button").slideUp(400);
           setTimeout(function() {
             $("#lightside_button").remove();
@@ -75,6 +76,7 @@ $(document).ready(function () {
             $("#lightsideperson").css("background-image","url(\"img/FighterObiHead.png\")");
           },1000);
         });
+      },500);
         $("#lightside").css("background-image","none");
         onLightside = true;
       }
@@ -89,7 +91,7 @@ $(document).ready(function () {
   });
 
   $("#darkside").mouseleave(function() {
-    if (!onLightside) {
+    if (!onDarkside) {
       $("#saberfire").css({bottom:-1000})
       $("#redlightsaber").css({bottom:-1000});
     }
@@ -107,7 +109,7 @@ $(document).ready(function () {
     }
   });
 
-  $("footer").mouseover(function() {
+  $("#footerwrapper").mouseover(function() {
     if (onLightside) {
       $("#bluelightsaber").css({bottom:0});
     } else if (onDarkside) {
@@ -116,12 +118,12 @@ $(document).ready(function () {
     }
   });
 
-  $("footer").mouseleave(function() {
+  $("#footerwrapper").mouseleave(function() {
     if (onLightside) {
-      $("#bluelightsaber").css({bottom:-1350});
+      $("#bluelightsaber").css({bottom:-1500});
     } else if (onDarkside) {
-      $("#redlightsaber").css({bottom:-1350});
-      $("#saberfire").css({bottom:-1350});
+      $("#redlightsaber").css({bottom:-1500});
+      $("#saberfire").css({bottom:-1500});
     }
   });
 
@@ -141,57 +143,60 @@ $(document).ready(function () {
     },
     click: function(){
       if (!onDarkside) {
-        $("#darkside").css("background-image","none");
-        $("#badboylightsaber").css("transform-origin","bottom right");
-        $("#badboylightsaber").css("transform","rotate(90deg)");
-        $("#badboylightsaber").css("bottom","24.5%");
-        $("#badboylightsaber").css("left","-4.25%");
-        $("#redlightsaber").css("width","186px");
-        $("#redlightsaber").css("height","70vw");
-        $("#redlightsaber").css("bottom","-1350px");
-        $("#saberfire").css("width","186px");
-        $("#saberfire").css("height","70vw");
-        $("#saberfire").css("bottom","-1350px");
-        $("#redlightsabercontainer").css("height","70vw");
-        setTimeout(function() {
-          $("#badboylightsaber").appendTo("footer");
-          $("#badboylightsaber").css("bottom","76%");
-          $("#darkside_button").slideDown(400);
-        },1000);
         $("#darkside_title").css("margin-top","-1vh");
         $("#darkside_title").css("margin-left","40vw");
-        $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)");
-        $("#darksidebackground").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)");
-        $("#darkside").prepend($("<button id=\"darkside_button\"><span>Back </span></button>"));
-        $("#darksidepic").css("diplay","block")
-        $("#darksidepic").slideDown(800);
+        setTimeout(function() {
+          $("#darkside").css("background-image","none");
+          $("#badboylightsaber").css("transform-origin","bottom right");
+          $("#badboylightsaber").css("transform","rotate(90deg)");
+          $("#badboylightsaber").css("bottom","24.5%");
+          $("#badboylightsaber").css("left","-4.25%");
+          $("#redlightsaber").css("width","186px");
+          $("#redlightsaber").css("height","1500px");
+          $("#redlightsaber").css("bottom","-1500px");
+          $("#saberfire").css("width","186px");
+          $("#saberfire").css("height","1500");
+          $("#saberfire").css("bottom","-1500px");
+          $("#redlightsabercontainer").css("height","1500px");
+          setTimeout(function() {
+            $("#badboylightsaber").appendTo("footer");
+            $("#badboylightsaber").css("bottom","76%");
+            $("#darkside_button").slideDown(400);
+          },1000);
+          $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)");
+          $("#darksidebackground").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)");
+          $("#darkside").prepend($("<button id=\"darkside_button\"><span>Back </span></button>"));
+          $("#darksidepic").css("diplay","block")
+          $("#darksidepic").slideDown(800);
 
-        $("#darkside_button").click(function() {
-          $("#darksidepic").slideUp(800);
-          setTimeout(function() {
-            $("#darkside_title").css("margin-top","20vh");
-            $("#darkside_title").css("margin-left","5vw");
-            $("#darkside").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100%)");
-            $("#darksidebackground").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100%)");
-          },800);
-          $("#darkside_button").slideUp(400);
-          setTimeout(function() {
-            $("#darkside_button").remove();
-          }, 400);
-          onDarkside = false;
-          $("#badboylightsaber").css("transform","initial");
-          $("#redlightsaber").css("height","auto");
-          $("#redlightsaber").css("width","auto");
-          $("#saberfire").css("height","auto");
-          $("#saberfire").css("width","auto");
-          $("#badboylightsaber").css("bottom","-15vh");
-          $("#badboylightsaber").css("left","0");
-          setTimeout(function() {
-            $("#badboylightsaber").appendTo("#darkside");
-            $("#badboylightsaber").css("bottom","0");
-            $("#darkside").css("background-image","url(\"img/imperator.png\")");
-          }, 1000);
-        });
+          $("#darkside_button").click(function() {
+            $("#darksidepic").slideUp(800);
+            setTimeout(function() {
+              $("#darkside_title").css("margin-top","20vh");
+              $("#darkside_title").css("margin-left","5vw");
+              $("#darkside").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100%)");
+              $("#darksidebackground").css("-webkit-clip-path","polygon(65% 0, 0 0, 0 100%, 35% 100%)");
+            },800);
+            $("#darkside_button").slideUp(400);
+            setTimeout(function() {
+              $("#darkside_button").remove();
+            }, 400);
+            onDarkside = false;
+            $("#badboylightsaber").css("transform","initial");
+            $("#redlightsaber").css("height","auto");
+            $("#redlightsaber").css("width","auto");
+            $("#saberfire").css("height","auto");
+            $("#saberfire").css("width","auto");
+            $("#badboylightsaber").css("bottom","-15vh");
+            $("#badboylightsaber").css("left","0");
+            setTimeout(function() {
+              $("#badboylightsaber").appendTo("#darkside");
+              $("#badboylightsaber").css("bottom","0");
+              $("#darkside").css("background-image","url(\"img/imperator.png\")");
+            }, 1000);
+          });
+        },500);
+
         $("#darkside").css("background-image","none");
         onDarkside = true;
       }
