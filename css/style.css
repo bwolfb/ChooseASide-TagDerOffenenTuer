@@ -100,13 +100,13 @@ header{
 }
 
 #lightside_title{
-  text-shadow: 1px  1px 70px blue;
+  text-shadow: 1px 1px 70px blue;
   margin-top: 20vh;
   margin-left: 68vw;
 }
 
 #darkside_title{
-  text-shadow: 1px  1px 70px red;
+  text-shadow: 1px 1px 70px red;
   margin-top: 20vh;
   margin-left: 7vw;
 }
@@ -200,16 +200,16 @@ button:hover span:after {
   background-size: cover;
   display: none;
   position: absolute;
-  width: 80vw;
-  height: 70vh;
+  width: 70vw;
+  height: 60vh;
   margin-top: 13vh;
-  margin-left: 10vw;
+  margin-left: 16vw;
 }
 
 div {
   transform : translateZ(0);
 }
-
+/*-------------------Lichschwert Griffe-------------------*/
 #badboyhandle {
   bottom:70px;
   left: -31px;
@@ -223,7 +223,7 @@ div {
   bottom: -1000px;
   transition: bottom 0.7s;
 }
-
+/*-------------------Lcihtschwert-------------------*/
 #badboylightsaber {
   position: absolute;
   bottom:0;
@@ -273,6 +273,20 @@ div {
   margin-bottom: 545px;
   height: 1000px;
   width: 600px;
+}
+h2{
+  position: absolute;
+  font-size:1.5vw;
+  font-family: StarJedi, Impact,serif;
+  text-shadow: 1px 1px 70px #000000;
+  text-align: center;
+  color: white;
+  line-height: 15vh;
+  width: 100%;
+}
+
+h2 span {
+  font-family: Impact,serif;
 }
 
 footer {

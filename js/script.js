@@ -43,7 +43,7 @@ $(document).ready(function () {
           $("#goodboylightsaber").appendTo("footer");
           $("#goodboylightsaber").css("bottom","89%");
         },1000);
-        $("#lightside_title").css("margin-top","2vh");
+        $("#lightside_title").css("margin-top","-1vh");
         $("#lightside_title").css("margin-left","40vw");
         $("#lightsideperson").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100%)");
         $("#lightsidebackground").css("-webkit-clip-path","polygon(0 0, 100% 0, 100% 100%, 0 100%)");
@@ -155,7 +155,7 @@ $(document).ready(function () {
           $("#badboylightsaber").appendTo("footer");
           $("#badboylightsaber").css("bottom","76%");
         },1000);
-        $("#darkside_title").css("margin-top","2vh");
+        $("#darkside_title").css("margin-top","-1vh");
         $("#darkside_title").css("margin-left","40vw");
         $("#darkside").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)");
         $("#darksidebackground").css("-webkit-clip-path","polygon(100% 0, 0 0, 0 100%, 100% 100%)");
