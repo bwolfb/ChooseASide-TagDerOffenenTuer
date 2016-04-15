@@ -51,9 +51,17 @@ body {
 }
 
 #lightside {
+}
+
+#lightsideperson {
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-clip-path 0.7s; /* Safari */
+  transition: -webkit-clip-path 0.7s;
+  background-image: url("../img/FighterObiHead.png");
   -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
   clip-path: polygon(65% 0, 100% 0, 100% 100%, 35% 100vh);
-  background-image: url("../img/FighterObiHead.png");
+  height: 100%;
 }
 
 /*-------------------Titel-------------------*/
@@ -63,7 +71,7 @@ background-repeat: repeat;
 height: 15vh;
 }
 #Titel {
-  font-size:4vw;
+  font-size:5vw;
   font-family: StarJedi, Impact,serif;
   text-shadow: 1px  1px 30px white;
   text-align: center;
@@ -82,7 +90,7 @@ height: 15vh;
   font-size:4.75vw;
   font-family: StarJedi, Impact;
   text-align: center;
-  width:22%;
+  width:28%;
   -webkit-transition: margin-top 0.5s, margin-left 0.5s; /* Safari */
   transition: margin-top 0.5s, margin-left 0.5s;
   padding: 0, 0, 2px, 0;
@@ -105,7 +113,6 @@ height: 15vh;
 /*-------------------Button Allgemein-------------------*/
 button {
   top:0;
-  left:0;
   display: inline-block;
   border-radius: 5px;
   border: none;
@@ -146,8 +153,14 @@ button:hover span:before {
 button:focus {
   outline: 0;
 }
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 /*-------------------Lightside Button-------------------*/
 #lightside_button {
+  right:0;
   background-color: #555555;
   color: #FFFFFF;
   display: none;
@@ -159,6 +172,7 @@ button:focus {
 
 /*-------------------Darkside Button-------------------*/
 #darkside_button {
+  left:0;
   background-color: #FFFFFF;
   color: black;
   display: none;
@@ -180,213 +194,9 @@ button:focus {
   margin-left: 20%;
 }
 
-/*-------------------LASER-------------------*/
-.lightsaber {
-  position: relative;
-}
-
-.lightsaber label {
-  background-image: url("../img/badboywaffe.png");
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 88;
-  text-indent: -9999px;
-  width: 14px;
-  height: 50px;
-}
-
-.lightsaber .switch {
-  background: #B94A37;
-  width: 5px;
-  height: 10px;
-  display: block;
-  position: absolute;
-  bottom: 25px;
-  left: 9px;
-  transition: left 200ms;
-  -moz-transition: left 200ms;
-  -webkit-transition: left 200ms;
-  -o-transition: left 200ms;
-  -ms-transition: left 200ms;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -o-border-radius: 10px;
-  -ms-border-radius: 10px;
-}
-
-.lightsaber input[type=checkbox] {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  -moz-opacity: 0;
-  -webkit-opacity: 0;
-  -o-opacity: 0;
-  -ms-opacity: 0;
-  z-index: 77;
-}
-
-.lightsaber .plasma {
-  transition: height 300ms,;
-  -moz-transition: height 300ms;
-  -webkit-transition: height 300ms;
-  -o-transition: height 300ms;
-  -ms-transition: height 300ms;
-  border-radius: 12px 12px 0 0;
-  position: absolute;
-  bottom: 45px;
-  left: 2px;
-  width: 10px;
-  display: block;
-  filter: blur(1px);
-  -moz-filter: blur(1px);
-  -webkit-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  height: 0;
-}
-
-button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.lightsaber input[type=checkbox]:checked ~ div.plasma {
-  height: 250px;
-}
-
-.lightsaber input[type=checkbox]:hover ~ div.switch {
-  background: #c09853;
-  left: 10.5px;
-}
-
-.lightsaber input[type=checkbox]:checked ~ div.switch {
-  background: #468847;
-}
-
-/*-------------------Roter Laser-------------------*/
-.vader {
-  background: rgb(229,17,21); /* Old browsers */
-  background: linear-gradient(to right, rgba(229,17,21,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(229,17,21,1) 100%); /* W3C */
-  background: -moz-linear-gradient(left, rgba(229,17,21,1) 0%, rgba(254,254,254,1) 30%, rgba(254,254,254,1) 47%, rgba(254,254,254,1) 71%, rgba(229,17,21,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(229,17,21,1)), color-stop(30%,rgba(254,254,254,1)), color-stop(47%,rgba(254,254,254,1)), color-stop(71%,rgba(254,254,254,1)), color-stop(100%,rgba(229,17,21,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(229,17,21,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(229,17,21,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(229,17,21,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(229,17,21,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(229,17,21,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(229,17,21,1) 100%); /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e51115', endColorstr='#e51115',GradientType=1 ); /* IE6-9 */
-  animation-name: vader;
-  -moz-animation-name: vader;
-  -webkit-animation-name: vader;
-  -o-animation-name: vader;
-  -ms-animation-name: vader;
-  animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -webkit-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  -ms-animation-duration: 2s;
-  animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-}
-
-/*-------------------Blauer Laser-------------------*/
-.obi-wan {
-  background: rgb(55,132,214); /* Old browsers */
-  background: linear-gradient(to right, rgba(55,132,214,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(55,132,214,1) 100%); /* W3C */
-  background: -moz-linear-gradient(left, rgba(55,132,214,1) 0%, rgba(254,254,254,1) 30%, rgba(254,254,254,1) 47%, rgba(254,254,254,1) 71%, rgba(55,132,214,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(55,132,214,1)), color-stop(30%,rgba(254,254,254,1)), color-stop(47%,rgba(254,254,254,1)), color-stop(71%,rgba(254,254,254,1)), color-stop(100%,rgba(55,132,214,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(55,132,214,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(55,132,214,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(55,132,214,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(55,132,214,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(55,132,214,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(55,132,214,1) 100%); /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3784d6', endColorstr='#3784d6',GradientType=1 ); /* IE6-9 */
-  animation-name: obi-wan;
-  -moz-animation-name: obi-wan;
-  -webkit-animation-name: obi-wan;
-  -o-animation-name: obi-wan;
-  -ms-animation-name: obi-wan;
-  animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -webkit-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  -ms-animation-duration: 2s;
-  animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-}
-
 div {
-  -webkit-transform : translateZ(0);
-  -o-transform : translateZ(0);
-  -moz-transform : translateZ(0);
   transform : translateZ(0);
 }
-
-@keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-@-moz-keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-@-webkit-keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-@-o-keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-@-ms-keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-
-@keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-@-moz-keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-@-webkit-keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-@-o-keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-@-ms-keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-
-/*#footerlichtschwert .lightsaber input[type=checkbox]:checked ~ div.plasma {
-  height: 100vh;
-}
-
-#footerlichtschwert .lightsaber .plasma {
-  width: 150px;
-}*/
 
 #badboyhandle {
   bottom:70px;
@@ -405,6 +215,8 @@ div {
 #badboylightsaber {
   position: absolute;
   bottom:0;
+  left:0;
+  transition: transform 1s, left 1s, bottom 1s;
 }
 
 #redlightsabercontainer {
@@ -424,7 +236,7 @@ div {
 }
 
 #goodboyhandle {
-  bottom:-240px;
+  bottom:-120px;
   right: -27px;
   position: absolute;
   z-index: 1
@@ -433,7 +245,8 @@ div {
 #goodboylightsaber {
   position: absolute;
   bottom:0;
-  right: 0;
+  right:0;
+  transition: transform 1s, right 1s, bottom 1s;
 }
 
 #bluelightsaber {
@@ -445,7 +258,20 @@ div {
 
 #bluelightsabercontainer {
   overflow: hidden;
-  margin-bottom: 425px;
+  margin-bottom: 545px;
   height: 1000px;
   width: 600px;
+}
+
+footer {
+  display: block;
+  height: 124px;
+}
+
+#footerwrapper {
+  display: block;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
 }
