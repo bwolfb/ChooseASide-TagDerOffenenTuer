@@ -113,10 +113,6 @@ header{
 /*-------------------Button Allgemein-------------------*/
 button {
   top:0;
-<<<<<<< HEAD
-  left:50%;
-=======
->>>>>>> origin/master
   display: inline-block;
   border-radius: 5px;
   border: none;
@@ -214,69 +210,6 @@ div {
   transform : translateZ(0);
 }
 
-<<<<<<< HEAD
-@keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-@-moz-keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-@-webkit-keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-@-o-keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-@-ms-keyframes vader {
-  from { box-shadow: 0 0 10px #e51115; }
-  50% { box-shadow: 0 0 16px #e51115; }
-  to { box-shadow: 0 0 10px #e51115; }
-}
-
-@keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-@-moz-keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-@-webkit-keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-@-o-keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-@-ms-keyframes obi-wan {
-  from { box-shadow: 0 0 10px #3784d6; }
-  50% { box-shadow: 0 0 16px #3784d6; }
-  to { box-shadow: 0 0 10px #3784d6; }
-}
-
-/*#footerlichtschwert .lightsaber input[type=checkbox]:checked ~ div.plasma {
-height: 100vh;
-}
-
-#footerlichtschwert .lightsaber .plasma {
-width: 150px;
-}*/
-
-=======
->>>>>>> origin/master
 #badboyhandle {
   bottom:70px;
   left: -31px;
